@@ -21,6 +21,18 @@ pipeline {
           }
         }
 
+        stage('') {
+          agent {
+            docker {
+              image 'python:latest'
+            }
+
+          }
+          steps {
+            sh 'echo moi'
+          }
+        }
+
       }
     }
 
