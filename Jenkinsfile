@@ -9,19 +9,7 @@ pipeline {
           }
         }
 
-        stage('Build app') {
-          agent {
-            docker {
-              image 'gradle:6-jdk11'
-            }
-
-          }
-          steps {
-            sh 'ci/build-app.sh'
-          }
-        }
-
-        stage('') {
+        stage('error') {
           agent {
             docker {
               image 'python:latest'
